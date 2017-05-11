@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\textcolor.xml",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\textcolor.xml"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_edit.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_edit.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_compose.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_compose.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\search1.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\search1.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\app_notes.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\app_notes.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_revert.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_revert.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\txt.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\txt.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\search.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\search.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_save.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_save.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_delete.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\ic_menu_delete.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\live_folder_notes.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\live_folder_notes.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\setting.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable\\setting.png"
+    }
+]

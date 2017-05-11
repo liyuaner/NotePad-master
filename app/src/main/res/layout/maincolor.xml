@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/maincolor">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#FFEF4C4C"
+       android:id="@+id/redmain"
+        android:onClick="ColorSelect"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#FF0CE1F1"
+        android:id="@+id/bluemain"
+        android:onClick="ColorSelect"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#FF9BFA02"
+        android:id="@+id/greenmain"
+        android:onClick="ColorSelect"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#FFF7DB06"
+        android:id="@+id/yellowmain"
+        android:onClick="ColorSelect"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000"
+        android:id="@+id/blackmain"
+        android:onClick="ColorSelect"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#FFFAFAFA"
+        android:id="@+id/whitemain"
+        android:onClick="ColorSelect"/>
+</LinearLayout>

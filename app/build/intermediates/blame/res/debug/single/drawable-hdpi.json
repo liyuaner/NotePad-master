@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_compose.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_compose.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_revert.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_revert.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\live_folder_notes.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\live_folder_notes.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\star.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\star.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_delete.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_delete.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_save.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_save.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\app_notes.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\app_notes.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\sort.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\sort.png"
+    },
+    {
+        "merged": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_edit.png",
+        "source": "F:\\QQPCmgr\\Desktop\\NotePad-master\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_edit.png"
+    }
+]
