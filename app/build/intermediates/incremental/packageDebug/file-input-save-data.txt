@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun May 21 10:46:11 CST 2017
+#Sun May 21 11:22:40 CST 2017
 175.set=ANDROID_RESOURCE
 122.file=D\:\\Users\\Administrator\\AndroidStudioProjects\\NotePad-master\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_expanded_menu_layout.xml
 60.set=ANDROID_RESOURCE
