@@ -3,6 +3,7 @@
 
 ### 1、基本要求：
 NoteList中显示条目增加时间戳显示
+
 添加笔记查询功能（根据标题查询）
 
 ### 2、扩展功能：
@@ -32,16 +33,16 @@ UI美化、笔记排序、导出笔记
 
 ![排序](https://github.com/liyuaner/NotePad-master/blob/master/pic/排序.png)
 
-第一种是按照标题名字在前面的开始排序（title name asc）
+#### 第一种是按照标题名字在前面的开始排序（title name asc）
 
 ![按名字升序](https://github.com/liyuaner/NotePad-master/blob/master/pic/按名字升序.png)
-第二种是按照标题名字在后面的开始排序(title name desc)
+#### 第二种是按照标题名字在后面的开始排序(title name desc)
 
 ![按名字降序](https://github.com/liyuaner/NotePad-master/blob/master/pic/按名字降序.png)
-第三种(modeified time asc)
+#### 第三种(modeified time asc)
 
 ![按时间升序](https://github.com/liyuaner/NotePad-master/blob/master/pic/按修改时间降序.png)
-第四种(modified time desc)
+#### 第四种(modified time desc)
 
 ![按时间降序](https://github.com/liyuaner/NotePad-master/blob/master/pic/按修改时间升序.png)
 
