@@ -1,4 +1,4 @@
-#Thu May 11 20:42:13 CST 2017
-base.0=F\:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Sun May 21 10:46:11 CST 2017
+base.0=D\:\\Users\\Administrator\\AndroidStudioProjects\\NotePad-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=F\:\\QQPCmgr\\Desktop\\NotePad-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.0=D\:\\Users\\Administrator\\AndroidStudioProjects\\NotePad-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

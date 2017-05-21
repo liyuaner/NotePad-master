@@ -27,26 +27,18 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 /**
  * This Activity handles "editing" a note, where editing is responding to
@@ -62,7 +54,8 @@ import java.util.logging.SimpleFormatter;
 public class NoteEditor extends Activity {
     // For logging and debugging purposes
     private static final String TAG = "NoteEditor";
-     /*
+
+    /*
      * Creates a projection that returns the note ID and the note contents.
      */
     private static final String[] PROJECTION =
@@ -70,9 +63,7 @@ public class NoteEditor extends Activity {
             NotePad.Notes._ID,
             NotePad.Notes.COLUMN_NAME_TITLE,
             NotePad.Notes.COLUMN_NAME_NOTE,
-                NotePad.Notes.COLOR,
-                NotePad.Notes.TYPE
-
+//            NotePad.Notes.TYPE_TXT
     };
 
     // A label for the saved state of the activity
@@ -89,8 +80,6 @@ public class NoteEditor extends Activity {
     private Cursor mCursor;
     private EditText mText;
     private String mOriginalContent;
-    int color=Color.WHITE;
-
 
     /**
      * Defines a custom EditText View that draws lines between each line of text that is displayed.
@@ -226,8 +215,7 @@ public class NoteEditor extends Activity {
             null,         // No "where" clause selection values.
             null          // Use the default sort order (modification date, descending)
         );
-        mCursor.moveToFirst();
-        color=mCursor.getInt(3);
+
         // For a paste, initializes the data from clipboard.
         // (Must be done after mCursor is initialized.)
         if (Intent.ACTION_PASTE.equals(action)) {
@@ -242,26 +230,21 @@ public class NoteEditor extends Activity {
 
         // Gets a handle to the EditText in the the layout.
         mText = (EditText) findViewById(R.id.note);
-      // mText.setBackgroundColor(color);
+
         /*
          * If this Activity had stopped previously, its state was written the ORIGINAL_CONTENT
          * location in the saved Instance state. This gets the state.
          */
-
         if (savedInstanceState != null) {
             mOriginalContent = savedInstanceState.getString(ORIGINAL_CONTENT);
         }
-
-      registerForContextMenu(mText);
-        mText.setBackgroundColor(color);
-
-      NotePad.Notes.spinner=(Spinner)findViewById(R.id.spinner);
-        String arr[]={"全部","学习","工作","其他"};
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_multiple_choice,arr);
-        NotePad.Notes.spinner.setAdapter(adapter);
-        mCursor.moveToFirst();
-        NotePad.Notes.spinner.setSelection(mCursor.getInt(4));
-
+//        registerForContextMenu(mText);
+//        NotePad.Notes.spinner=(Spinner)findViewById(R.id.spinner);
+//        String arr[]={"全部","学习","工作","其他"};
+//        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_multiple_choice,arr);
+//        NotePad.Notes.spinner.setAdapter(adapter);
+//        mCursor.moveToFirst();
+//        NotePad.Notes.spinner.setSelection(mCursor.getInt(4));
     }
 
     /**
@@ -272,43 +255,6 @@ public class NoteEditor extends Activity {
      * the user, puts the note contents into the TextView, and saves the original text as a
      * backup.
      */
-    public void onCreateContextMenu(ContextMenu menu,View source,ContextMenu.ContextMenuInfo menuInfo){
-        MenuInflater inflator=new MenuInflater(this);
-        inflator.inflate(R.menu.background_color,menu);
-        menu.setHeaderTitle("Select Background color");
-    }
-
-    public boolean onContextItemSelected(MenuItem mi){
-        mi.setChecked(true);
-        switch(mi.getItemId()){
-            case R.id.red:
-                mi.setChecked(true);
-                mText.setBackgroundColor(Color.parseColor("#FFEF4C4C"));
-                color=Color.parseColor("#FFEF4C4C");
-                break;
-            case R.id.blue:
-                mi.setChecked(true);
-                mText.setBackgroundColor(Color.parseColor("#FF0CE1F1"));
-                color=Color.parseColor("#FF0CE1F1");
-                break;
-            case R.id.green:
-                mi.setChecked(true);
-                mText.setBackgroundColor(Color.parseColor("#FF9BFA02"));
-                color=Color.parseColor("#FF9BFA02");
-                break;
-            case R.id.yellow:
-                mi.setChecked(true);
-                mText.setBackgroundColor(Color.parseColor("#FFF7DB06"));
-                color=Color.parseColor("#FFF7DB06");
-                break;
-            case R.id.white:
-                mi.setChecked(true);
-                mText.setBackgroundColor(Color.parseColor("#FFFAFAFA"));
-                color=Color.parseColor("#FFFAFAFA");
-                break;
-        }
-        return true;
-    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -559,8 +505,6 @@ public class NoteEditor extends Activity {
                     if (orig.moveToFirst()) {
                         int colNoteIndex = mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_NOTE);
                         int colTitleIndex = mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_TITLE);
-                     //   int col=mCursor.getColumnIndex(NotePad.Notes.COLOR);
-                   //     Log.e("ccc",col+"");
                         text = orig.getString(colNoteIndex);
                         title = orig.getString(colTitleIndex);
                     }
@@ -588,13 +532,10 @@ public class NoteEditor extends Activity {
      * @param title The new note title to use
      */
     private final void updateNote(String text, String title) {
-        SimpleDateFormat simpleFormatter=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date=new  Date();
-        String t=simpleFormatter.format(date);
+
         // Sets up a map to contain values to be updated in the provider.
         ContentValues values = new ContentValues();
         values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, System.currentTimeMillis());
-
 
         // If the action is to insert a new note, this creates an initial title for it.
         if (mState == STATE_INSERT) {
@@ -620,21 +561,14 @@ public class NoteEditor extends Activity {
             }
             // In the values map, sets the value of the title
             values.put(NotePad.Notes.COLUMN_NAME_TITLE, title);
-            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE,t);
-
-
-
         } else if (title != null) {
             // In the values map, sets the value of the title
             values.put(NotePad.Notes.COLUMN_NAME_TITLE, title);
         }
 
-        values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,t);
         // This puts the desired notes text into the map.
         values.put(NotePad.Notes.COLUMN_NAME_NOTE, text);
-          values.put(NotePad.Notes.COLOR,color);
-        values.put(NotePad.Notes.TYPE, NotePad.Notes.spinner.getSelectedItemPosition());
-       values.put(NotePad.Notes.TYPE_TXT,NotePad.Notes.spinner.getSelectedItem().toString());
+
         /*
          * Updates the provider with the new values in the map. The ListView is updated
          * automatically. The provider sets this up by setting the notification URI for

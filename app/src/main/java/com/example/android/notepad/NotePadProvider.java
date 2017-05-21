@@ -45,6 +45,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 
 /**
@@ -63,7 +64,7 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
     /**
      * The database version
      */
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 6;
 
     /**
      * A projection map used to select columns from the database
@@ -155,10 +156,8 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
         sNotesProjectionMap.put(
                 NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
                 NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE);
-
-        sNotesProjectionMap.put(NotePad.Notes.COLOR, NotePad.Notes.COLOR);
-        sNotesProjectionMap.put(NotePad.Notes.TYPE, NotePad.Notes.TYPE);
-        sNotesProjectionMap.put(NotePad.Notes.TYPE_TXT, NotePad.Notes.TYPE_TXT);
+//        sNotesProjectionMap.put(NotePad.Notes.TYPE, NotePad.Notes.TYPE);
+//        sNotesProjectionMap.put(NotePad.Notes.TYPE_TXT, NotePad.Notes.TYPE_TXT);
         /*
          * Creates an initializes a projection map for handling Live Folders
          */
@@ -199,12 +198,9 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
                    + NotePad.Notes.COLUMN_NAME_TITLE + " TEXT,"
                    + NotePad.Notes.COLUMN_NAME_NOTE + " TEXT,"
                    + NotePad.Notes.COLUMN_NAME_CREATE_DATE + " INTEGER,"
-                   + NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE + " INTEGER,"
-                   + NotePad.Notes.COLOR+ " INTEGER,"
-                   +NotePad.Notes.TYPE+" INTEGER,"
-                  + NotePad.Notes.TYPE_TXT+" TEXT"
+                   + NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE + " INTEGER"
+//                   + NotePad.Notes.TYPE_TXT+" TEXT"
                    + ");");
-
        }
 
        /**
@@ -524,10 +520,13 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
 
         // Gets the current system time in milliseconds
         Long now = Long.valueOf(System.currentTimeMillis());
+        SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date=sf.format(now).toString();
+
 
         // If the values map doesn't contain the creation date, sets the value to the current time.
         if (values.containsKey(NotePad.Notes.COLUMN_NAME_CREATE_DATE) == false) {
-            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, now);
+            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, date);
         }
 
         // If the values map doesn't contain the modification date, sets the value to the current
@@ -546,6 +545,9 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
         if (values.containsKey(NotePad.Notes.COLUMN_NAME_NOTE) == false) {
             values.put(NotePad.Notes.COLUMN_NAME_NOTE, "");
         }
+//        if (values.containsKey(NotePad.Notes.TYPE_TXT) == false) {
+//            values.put(NotePad.Notes.TYPE_TXT, "");
+//        }
 
         // Opens the database object in "write" mode.
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();

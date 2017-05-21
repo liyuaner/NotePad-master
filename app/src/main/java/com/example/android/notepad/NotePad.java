@@ -151,9 +151,10 @@ public final class NotePad {
          * <P>Type: INTEGER (long from System.curentTimeMillis())</P>
          */
         public static final String COLUMN_NAME_MODIFICATION_DATE = "modified";
-        public static final String COLOR = "color";
+
+
         public static final String TYPE="type";
-public  static final  String TYPE_TXT="typetxt";
-        public static   Spinner spinner=null;
+        public static Spinner spinner=null;
+        public  static final  String TYPE_TXT="typetxt";
     }
 }

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -30,8 +29,6 @@
     <string name="menu_revert">Revert changes</string>
     <string name="menu_copy">Copy</string>
     <string name="menu_paste">Paste</string>
-    <string name="menu_color">Color</string>
-    <string name="menu_sort">Sort</string>
 
     <string name="button_ok">OK</string>
     <string name="text_title">Title:</string>
@@ -42,16 +39,6 @@
     <string name="error_title">Error</string>
     <string name="error_message">Error loading note</string>
     <string name="nothing_to_save">There is nothing to save</string>
-
-    <string name="red">red</string>
-    <string name="blue">blue</string>
-    <string name="green">green</string>
-    <string name="white">white</string>
-    <string name="yellow">yellow</string>
     <string name="tip">tip</string>
-
-
-
-
 
 </resources>

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\QQPCmgr\Desktop\NotePad-master\app\src\main\assets"/><source path="F:\QQPCmgr\Desktop\NotePad-master\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\QQPCmgr\Desktop\NotePad-master\app\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\Users\Administrator\AndroidStudioProjects\NotePad-master\app\src\main\assets"/><source path="D:\Users\Administrator\AndroidStudioProjects\NotePad-master\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\Users\Administrator\AndroidStudioProjects\NotePad-master\app\src\debug\assets"/></dataSet></merger>
